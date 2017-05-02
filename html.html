@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Prodej zemědělských stojů</title>
+  </head>
+  <body>
+      <h1>Prodej zemědělských strojů</h1>
+      <header>
+          Menu:
+          <nav>
+              <ul>
+                  <li><a href="#one">Úvod</a></li>
+                  <li><a href="#two">Metodika</a></li>
+                  <li><a href="#three">Popis elementů a atributů</a></li>
+                  <li><a href="#four">Popis transformace</a></li>
+                  <li><a href="#five">Závěr</a></li>
+              </ul>
+          </nav>
+      </header>
+      <hr>
+      <section id="one">
+          <article>
+              <h2>Úvod</h2>
+              <p>Tato práce je studentský projekt vytvořený jako semestrální práce pro předmět Značkovací jazyky na České Zemědělské univerzitě v Praze.</p>
+              <p>Semestrální práce obsahuje XML soubor s daty kde je defonováno 50 elementů a 10 atributů s 5-ti ukázkovými záznami, vypracované XMLSchema kde nalezneme restrikce (omezení) pro každý element a atribut a 
+              XSLT soubor kde je vytvořena transformace do HTML</p>
+              <p>Práce se zabývá zpracováním objednávek pro prodej zemědělských strojů.</p>
+          </article>    
+      </section>
+      <section id="two">
+          <article>
+              <h2>Metodika</h2>
+              <p>Hlavní soubory této práce (XML, XMLSchema, XSLT) jsou vypracovány  v <a href="https://notepad-plus-plus.org/">Notepad++</a> a jejich správnost ověřena na online validátorech, například 
+              <a hrev="http://www.utilities-online.info/xsdvalidation/#.VxaEEzCLQ-X">Utilities Online</a> pro ověření validity XML dokumentu, jestli je Well formed, neboli bez chyby a jestli zároveň koresponduje s XMLSchema (XSD souborem).
+              XSD totiž slouží jako šablona pro vkládání dat v XML, pokud tedy máme v XSD definován element jako xs:integer nelze do něv vkládat znak. Také omezuje některé elementy a atributy v zadávaní, kde se vyžaduje přesný počet čísel například u čísla účtu
+              nebo vyplnění emailové adresy, kde adresa musí obsahovat znaky(cisla)@znaky.znaky coz je standard pro zadávání emailové adresy. Při nedodržení těchto restrikcí aplikace nová data nepřijme a vyhodí chybu.</p>
+          </article>    
+      </section>
+      <section id="three">
+          <article>
+              <h2>Popis elementů a atributů</h2>
+              <p>XML soubor lze rozdělit na objednávkový list neboli Objednávka, která obsahuje Objednavatele, Dodavatele a Traktor a jejich elementy a aributy.</p>
+              <ul>
+                  <li>Zemědělské stoje</li>
+                  <ul>
+                      <li>Objednávka - element - data o různých objednávkách</li>
+                      <ul>
+                          <li>Objednavkaid - atribut - rozeznání jednotlivých objednávek</li>
+                          <li>Datum - element - datum objednavky</li>
+                          <li>Cas - element - cas objednavky</li>
+                          <li>Objednavatel - elemnt - data o člověku, který si objednal nějaký stroj</li>
+                          <ul>
+                              <li>Datumnarozeni - atribut - datum narození Objednavatele</li>
+                              <li>Titul - atribut - titul Objednavatele</li>
+                              <li>Jmeno - element - jméno objednavatele</li>
+                              <li>Prijmeni - element - příjmení objednavatele</li>
+                              <li>Vek - element - vek objednavatele</li>
+                              <li>Cislouctu - element - číslo účtu objednavatele</li>
+                              <li>Adresa - element - adresa Objednavatele</li>
+                              <ul>
+                                  <li>Typadresy - atribut - adresa může být doručovací nebo korespondenční, adresa Objednavatele</li>
+                                  <li>Kontinet - element - jméno objednavatele</li>
+                                  <li>Stat - element - stát ve kterém bydlí objednavatel</li>
+                                  <li>Kraj - element - kraj ve kterém bydlí objednavatel</li>
+                                  <li>Mesto - element - město ve kterém bydlí objednavatel</li>
+                                  <li>Ulice - element - ulice ve které bydlí objednavatel</li>
+                                  <li>Cislo - element - číslo na kterém bydlí objednavatel</li>
+                                  <li>Psc - element - psč na které bydlí Objednavatel</li>
+                              </ul>
+                          </ul>
+                          <li>Dodavatel - element - firma, která dodá objednané zboží</li>
+                          <ul>
+                              <li>Nazevfirmy - element - název firmy Dodavatele</li>
+                              <li>Url - element - url firmy Dodavatele</li>
+                              <li>Email - element - email firmy Dodavatele</li>
+                              <li>Telefon - element - telefon firmy Dodavatele</li>
+                              <li>Fax - element - fax firmy Dodavatele</li>
+                              <li>Ico - element - IČO firmy Dodavatele</li>
+                          </ul>
+                          <li>Traktor</li>
+                          <ul>
+                              <li>Oznaceni - atribut - Kategorie traktoru (Velké, střední, malé, speciální traktory)</li>
+                              <li>Vyrobeno - atribut - datum vyrobení traktoru</li>
+                              <li>Stav - atribut - stav vozidla (nový,ojetý)</li>
+                              <li>Mnozstvi - atribut - množství objednaných traktorů s těmito parametry</li>
+                              <li>Nazev - element - název Traktoru</li>
+                              <li>Rada - element - řada Traktoru</li>
+                              <li>Vyrobnicislo - element - výrobní číslo Traktoru</li>
+                              <li>Pridavnebrzdy - element - jestli vybavení traktoru obsahuje přídavné brzdy</li>
+                              <li>Vykon - element - výkon Traktoru</li>
+                              <li>Obsahvalcu - element - obsah válců Traktoru</li>
+                              <li>Vaha - element - váha Traktoru</li>
+                              <li>Taznasila - element - tažná síla Traktoru</li>
+                              <li>Cena - element - Cena Traktoru</li>
+                              <li>Klicovevlastnosti - element - nadstandardní výbava traktoru</li>
+                              <ul>
+                                  <li>Typ - atribut - typ kabiny (příplatková, standardní, ..)</li>
+                                  <ul>
+                                      <li>Kabina - element - vlastnosti kabiny Traktoru</li>
+                                      <li>Vyhled - element -  jak velký je výhled z traktoru</li>
+                                      <li>Klimatizace - element -  jestli kabina obsahuje klimatizaci</li>
+                                      <li>Zvuk - element -  jestli kabina obsahuje rádio a jaké má vlastnosti</li>
+                                      <li>Ovladace - element -  jestli kabina má barevně rozlišené ovladače</li>
+                                      <li>Vnejsiosvetleni - element -  kolik stupňů dokáže osvítit venkovní osvětlení</li>
+                                      <li>Pocetsvetel - element -  kolik světel obsahuje traktor (jsou na kambině)</li>
+                                  </ul>
+                                  <li>Rizeni - element - vlastnosti řízení Traktoru</li>
+                                  <ul>
+                                      <li>Nazevrizeni - atribut - název řízení</li>
+                                      <li>Druh - atribut - druh řízení (elektronicé, manuální, ...)</li>
+                                      <li>Kontrolastability - element - jakou traktor používá kontrolu stability</li>
+                                      <li>Variabilniprevod - element - muže traktor použít varabilní převod (ano, ne)</li>
+                                  </ul>
+                                  <li>Prevodovka - element - vlastnosti převodovky Traktoru</li>
+                                  <ul>
+                                      <li>Nazevprevodovky - atribut - název převodovky</li>
+                                      <li>Rychlosti - atribut - počet rychlostí dobředu+dozadu</li>
+                                      <li>Prepravnirychlost - element - přepravní rychlost, které traktor dosáhne</li>
+                                      <li>Otacky - element - otáčky kterých dosahuje převodovka</li>
+                                      <li>Nastavenirychlosti - element - nastavení automatické udržování rychlosti traktoru (ano, ne)</li>
+                                      <li>Prevody - element - typ prevodů, kterými převodovka disponuje</li>
+                                  </ul>
+                              </ul>
+                          </ul>
+                      </ul>
+                  </ul>
+              </ul>
+          </article>    
+      </section>
+      <section id="four">
+          <article>
+              <h2>Popis transformace</h2>
+              <p>Transformace je uložena v XSLT souboru a obsahuje výpis 5 záznamů. Vytvoří se tabulka kde jsou barevně odděleny sopuvisející skupiny elementů. 
+              Pomocí XSL:FOR-EACH projedu všechny záznamy a pomocí XSL:SORT je seřadím dle abecedy podle příjmení Objednavatelů.</p>
+              <p>Ukázka výpisu:</p>
+              <table border="1">
+              	<tr>
+              		<th bgcolor="Red">ID Objednavky</th>
+              		<th bgcolor="Red">Datum</th>
+              		
+              		<th bgcolor="GreenYellow">Jmeno</th>
+              		<th bgcolor="GreenYellow">Prijmeni</th>
+              		<th bgcolor="GreenYellow">Datum narozeni</th>
+              		<th bgcolor="GreenYellow">Mesto</th>
+              		<th bgcolor="GreenYellow">Ulice</th>
+              		<th bgcolor="GreenYellow">Cislo</th>
+              		
+              		<th bgcolor="Khaki">Nazev firmy</th>
+              		<th bgcolor="Khaki">ICO</th>
+              		
+              		<th bgcolor="DeepSkyBlue">Skupina</th>
+              		<th bgcolor="DeepSkyBlue">Vyrobeno</th>
+              		<th bgcolor="DeepSkyBlue">Stav</th>
+              		<th bgcolor="DeepSkyBlue">Mnozstvi</th>
+              		<th bgcolor="DeepSkyBlue">Nazev</th>
+              		<th bgcolor="DeepSkyBlue">Rada</th>
+              		<th bgcolor="DeepSkyBlue">Cena</th>
+              		
+              		<th bgcolor="Gold">Typ kabiny</th>
+              		<th bgcolor="Gold">Klimatizace</th>
+              		<th bgcolor="Gold">Vnejsi osvetleni</th>
+              		<th bgcolor="Gold">Pocet svetel</th>
+              		
+              		<th bgcolor="MediumAquaMarine">Kontrola stability</th>
+              		<th bgcolor="MediumAquaMarine">Variabilni prevod</th>
+              		
+              		<th bgcolor="Orange">Pocet rychlosti</th>
+              		<th bgcolor="Orange">Prepravni rychlost</th>
+              	</tr>
+              	<tr>
+            			<td>00-01</td>
+            			<td>2017-01-01</td>
+            			
+            			<td>Šimon</td>
+            			<td>Kokoška</td>
+            			<td>1994-05-21</td>
+            			
+            			<td>Praha</td>
+            			<td>Bubenečská</td>
+            			<td>258/9</td>
+            			
+            			<td>John Deere</td>
+            			<td>365990375</td>
+            			
+            			<td>Velké traktory</td>
+            			<td>2015-12-12</td>
+            			<td>nový</td>
+            			<td>1</td>
+            			<td>John Deere</td>
+            			<td>9R</td>
+            			<td>6000000</td>
+            			
+            			<td>příplatková</td>
+            			<td>ano</td>
+            			<td>360'</td>
+            			<td>26</td>
+            			
+            			<td>dynamická</td>
+            			<td>ano</td>
+            			
+            			<td>16D+5R</td>
+            			<td>50</td>
+            		</tr>
+                </table>
+          </article>    
+      </section>
+      <section id="five">
+          <article>
+              <h2>Závěr</h2>
+              <p>Díky tomuto projektu se žák zacvičí v používání značkovacích jazyků a osvojí nové vlastnosti při vytváření XML dokumentů.</p>
+              <p>Semestrální práce byla zpracována dle zadání umístěné na moodle.czu.cz a zkontrolována pomocí validátorů pro potřebné soubory a je bez chyb.</p>
+          </article>    
+      </section>
+      <hr>
+      <footer>
+          Vypracováno dne: 26.4.2017<br>
+          Sám vypracoval: Šimon Kokoška 21.5.1994 INFO PEF 2.ročník
+      </footer>
+  </body>
+</html>

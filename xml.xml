@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<zemedelskatechnika xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd4.xsd">
+	<objednavka objednavkaid="00-01">
+		<datum>2017-01-01</datum>
+		<cas>12:00:00</cas>
+		<objednavatel datumnarozeni="1994-05-21" titul="žádný">
+			<jmeno>Šimon</jmeno>
+			<prijmeni>Kokoška</prijmeni>
+			<vek>22</vek>
+			<cislouctu>CZ4083605207004200012345</cislouctu>
+			<adresa typadresy="doručovací">
+				<kontinent>Evropa</kontinent>
+				<stat>Česká republika</stat>
+				<kraj>Hl.m.Praha</kraj>
+				<mesto>Praha</mesto>
+				<ulice>Bubenečská</ulice>
+				<cislo>258/9</cislo>
+				<psc>16000</psc>
+			</adresa>
+		</objednavatel>
+		<dodavatel>
+			<nazevfirmy>John Deere</nazevfirmy>
+			<url>http://johndeeredistributor.cz/</url>
+			<email>info@deere.cz</email>
+			<telefon>123123123</telefon>
+			<fax>053/4492125</fax>
+			<ico>365990375</ico>
+		</dodavatel>
+		<traktor oznaceni="Velké traktory" vyrobeno="2015-12-12" stav="nový" mnozstvi="1">
+			<nazev>John Deere</nazev>
+			<rada>9R</rada>
+			<vyrobnicislo>425248</vyrobnicislo>
+			<pridavnebrzdy>ano</pridavnebrzdy>
+			<vykon>291kW</vykon>
+			<obsahvalcu>8080</obsahvalcu>
+			<vaha>1700</vaha>
+			<taznasila>1200</taznasila>
+			<cena>6000000</cena>
+			<klicovevlastnosti>
+				<kabina typ="příplatková">
+					<vyhled>perfektni</vyhled>
+					<klimatizace>ano</klimatizace>
+					<zvuk>prostorový</zvuk>
+					<ovladače>barevně rozlišeny</ovladače>
+					<vnejsiosvelteni>360'</vnejsiosvelteni>
+					<pocetsvetel>26</pocetsvetel>
+				</kabina>
+				<rizeni nazevrizeni="Active Command" druh="elektronické">
+					<kontrolastability>dynamická</kontrolastability>
+					<variabilniprevod>ano</variabilniprevod>
+				</rizeni>
+				<prevodovka nazevprevodovky="AutoPowr" rychlosti="16D+5R">
+					<prepravnirychlost>50</prepravnirychlost>
+					<otacky>1713</otacky>
+					<nastavenirychlosti>ano</nastavenirychlosti>
+					<prevody>variabilní</prevody>
+				</prevodovka>
+			</klicovevlastnosti>
+		</traktor>
+	</objednavka>
+	<objednavka objednavkaid="00-02">
+		<datum>2015-08-14</datum>
+		<cas>15:02:00</cas>
+		<objednavatel datumnarozeni="1996-05-14" titul="Ing.">
+			<jmeno>Pavel</jmeno>
+			<prijmeni>Hranička</prijmeni>
+			<vek>21</vek>
+			<cislouctu>CZ4046387946001300026547</cislouctu>
+			<adresa typadresy="doručovací">
+				<kontinent>Evropa</kontinent>
+				<stat>Česká republika</stat>
+				<kraj>Plzeňský</kraj>
+				<mesto>Plzeň</mesto>
+				<ulice>Manětínská</ulice>
+				<cislo>5849</cislo>
+				<psc>51200</psc>
+			</adresa>
+		</objednavatel>
+		<dodavatel>
+			<nazevfirmy>John Deere</nazevfirmy>
+			<url>http://johndeeredistributor.cz/</url>
+			<email>info@deere.cz</email>
+			<telefon>123123123</telefon>
+			<fax>053/4492125</fax>
+			<ico>365990375</ico>
+		</dodavatel>
+		<traktor oznaceni="Malé traktory" vyrobeno="2014-08-10" stav="nový" mnozstvi="1">
+			<nazev>John Deere</nazev>
+			<rada>5R</rada>
+			<vyrobnicislo>47712</vyrobnicislo>
+			<pridavnebrzdy>ano</pridavnebrzdy>
+			<vykon>75kW</vykon>
+			<obsahvalcu>2080</obsahvalcu>
+			<vaha>1000</vaha>
+			<taznasila>800</taznasila>
+			<cena>1000000</cena>
+			<klicovevlastnosti>
+				<kabina typ="příplatková">
+					<vyhled>perfektni</vyhled>
+					<klimatizace>ano</klimatizace>
+					<zvuk>prostorový</zvuk>
+					<ovladače>nerozlišeny</ovladače>
+					<vnejsiosvelteni>180'</vnejsiosvelteni>
+					<pocetsvetel>12</pocetsvetel>
+				</kabina>
+				<rizeni nazevrizeni="Active Command" druh="elektronické">
+					<kontrolastability>dynamická</kontrolastability>
+					<variabilniprevod>ne</variabilniprevod>
+				</rizeni>
+				<prevodovka nazevprevodovky="AutoPowr" rychlosti="10D+2R">
+					<prepravnirychlost>80</prepravnirychlost>
+					<otacky>2500</otacky>
+					<nastavenirychlosti>ano</nastavenirychlosti>
+					<prevody>variabilní</prevody>
+				</prevodovka>
+			</klicovevlastnosti>
+		</traktor>
+	</objednavka>
+	<objednavka objednavkaid="00-03">
+		<datum>2017-06-06</datum>
+		<cas>09:45:00</cas>
+		<objednavatel datumnarozeni="1971-03-05" titul="žádný">
+			<jmeno>Martin</jmeno>
+			<prijmeni>Antoš</prijmeni>
+			<vek>45</vek>
+			<cislouctu>CZ4055552222777700033265</cislouctu>
+			<adresa typadresy="doručovací">
+				<kontinent>Evropa</kontinent>
+				<stat>Česká republika</stat>
+				<kraj>Středočeský</kraj>
+				<mesto>Nymburk</mesto>
+				<ulice>Kurzova</ulice>
+				<cislo>4595</cislo>
+				<psc>65100</psc>
+			</adresa>
+		</objednavatel>
+		<dodavatel>
+			<nazevfirmy>Zetor</nazevfirmy>
+			<url>http://www.zetor.cz/produkty</url>
+			<email>info@zetor.cz</email>
+			<telefon>987654321</telefon>
+			<fax>077/99154632</fax>
+			<ico>468213579</ico>
+		</dodavatel>
+		<traktor oznaceni="Střední traktory" vyrobeno="2006-02-02" stav="ojetý" mnozstvi="2">
+			<nazev>Zetor Crystal</nazev>
+			<rada>A1</rada>
+			<vyrobnicislo>426659</vyrobnicislo>
+			<pridavnebrzdy>ne</pridavnebrzdy>
+			<vykon>120kW</vykon>
+			<obsahvalcu>2080</obsahvalcu>
+			<vaha>2200</vaha>
+			<taznasila>1200</taznasila>
+			<cena>800000</cena>
+			<klicovevlastnosti>
+				<kabina typ="standardní">
+					<vyhled>poloviční</vyhled>
+					<klimatizace>ne</klimatizace>
+					<zvuk>ne</zvuk>
+					<ovladače>nerozlišeny</ovladače>
+					<vnejsiosvelteni>75'</vnejsiosvelteni>
+					<pocetsvetel>8</pocetsvetel>
+				</kabina>
+				<rizeni nazevrizeni="Synchronizované" druh="manuální">
+					<kontrolastability>žádná</kontrolastability>
+					<variabilniprevod>ne</variabilniprevod>
+				</rizeni>
+				<prevodovka nazevprevodovky="PowerShuttle" rychlosti="8D+1R">
+					<prepravnirychlost>40</prepravnirychlost>
+					<otacky>700</otacky>
+					<nastavenirychlosti>ano</nastavenirychlosti>
+					<prevody>reverzní</prevody>
+				</prevodovka>
+			</klicovevlastnosti>
+		</traktor>
+	</objednavka>
+	<objednavka objednavkaid="00-04">
+		<datum>2012-04-20</datum>
+		<cas>10:59:00</cas>
+		<objednavatel datumnarozeni="1948-04-17" titul="žádný">
+			<jmeno>Vlastimil</jmeno>
+			<prijmeni>Král</prijmeni>
+			<vek>68</vek>
+			<cislouctu>CZ4078788989252500054646</cislouctu>
+			<adresa typadresy="doručovací">
+				<kontinent>Evropa</kontinent>
+				<stat>Česká republika</stat>
+				<kraj>Olomoucký</kraj>
+				<mesto>Olomouc</mesto>
+				<ulice>Stodolní</ulice>
+				<cislo>1212</cislo>
+				<psc>45400</psc>
+			</adresa>
+		</objednavatel>
+		<dodavatel>
+			<nazevfirmy>Zetor</nazevfirmy>
+			<url>http://www.zetor.cz/produkty</url>
+			<email>info@zetor.cz</email>
+			<telefon>987654321</telefon>
+			<fax>077/99154632</fax>
+			<ico>468213579</ico>
+		</dodavatel>
+		<traktor oznaceni="Speciální" vyrobeno="2010-02-02" stav="ojetý" mnozstvi="1">
+			<nazev>Zetor Crystal</nazev>
+			<rada>A6</rada>
+			<vyrobnicislo>78659</vyrobnicislo>
+			<pridavnebrzdy>ano</pridavnebrzdy>
+			<vykon>75kW</vykon>
+			<obsahvalcu>1080</obsahvalcu>
+			<vaha>700</vaha>
+			<taznasila>500</taznasila>
+			<cena>600000</cena>
+			<klicovevlastnosti>
+				<kabina typ="vylepšená">
+					<vyhled>poloviční</vyhled>
+					<klimatizace>ano</klimatizace>
+					<zvuk>ne</zvuk>
+					<ovladače>nerozlišeny</ovladače>
+					<vnejsiosvelteni>75'</vnejsiosvelteni>
+					<pocetsvetel>5</pocetsvetel>
+				</kabina>
+				<rizeni nazevrizeni="Synchronizované" druh="manuální">
+					<kontrolastability>ano</kontrolastability>
+					<variabilniprevod>ano</variabilniprevod>
+				</rizeni>
+				<prevodovka nazevprevodovky="PowerShuttle" rychlosti="8D+2R">
+					<prepravnirychlost>60</prepravnirychlost>
+					<otacky>1700</otacky>
+					<nastavenirychlosti>ne</nastavenirychlosti>
+					<prevody>reverzní</prevody>
+				</prevodovka>
+			</klicovevlastnosti>
+		</traktor>
+	</objednavka>
+	<objednavka objednavkaid="00-05">
+		<datum>2016-03-24</datum>
+		<cas>19:45:00</cas>
+		<objednavatel datumnarozeni="1995-08-12" titul="žádný">
+			<jmeno>Dominika</jmeno>
+			<prijmeni>Ebrlová</prijmeni>
+			<vek>20</vek>
+			<cislouctu>CZ4041412465630598604698</cislouctu>
+			<adresa typadresy="korespondenční">
+				<kontinent>Evropa</kontinent>
+				<stat>Česká republika</stat>
+				<kraj>Liberecký</kraj>
+				<mesto>Liberec</mesto>
+				<ulice>Babylonská</ulice>
+				<cislo>12</cislo>
+				<psc>32100</psc>
+			</adresa>
+		</objednavatel>
+		<dodavatel>
+			<nazevfirmy>John Deere</nazevfirmy>
+			<url>http://johndeeredistributor.cz/</url>
+			<email>info@deere.cz</email>
+			<telefon>123123123</telefon>
+			<fax>053/4492125</fax>
+			<ico>365990375</ico>
+		</dodavatel>
+		<traktor oznaceni="Velké traktory" vyrobeno="2016-02-02" stav="nový" mnozstvi="5">
+			<nazev>John Deere</nazev>
+			<rada>9R+</rada>
+			<vyrobnicislo>465321</vyrobnicislo>
+			<pridavnebrzdy>ano</pridavnebrzdy>
+			<vykon>455kW</vykon>
+			<obsahvalcu>12080</obsahvalcu>
+			<vaha>5800</vaha>
+			<taznasila>4000</taznasila>
+			<cena>9900000</cena>
+			<klicovevlastnosti>
+				<kabina typ="příplatková">
+					<vyhled>perfektni</vyhled>
+					<klimatizace>ano</klimatizace>
+					<zvuk>prostorový</zvuk>
+					<ovladače>barevně rozlišeny</ovladače>
+					<vnejsiosvelteni>360'</vnejsiosvelteni>
+					<pocetsvetel>30</pocetsvetel>
+				</kabina>
+				<rizeni nazevrizeni="Active Command" druh="elektronické">
+					<kontrolastability>dynamická</kontrolastability>
+					<variabilniprevod>ano</variabilniprevod>
+				</rizeni>
+				<prevodovka nazevprevodovky="AutoPowr" rychlosti="18D+6R">
+					<prepravnirychlost>130</prepravnirychlost>
+					<otacky>4058</otacky>
+					<nastavenirychlosti>ano</nastavenirychlosti>
+					<prevody>variabilní</prevody>
+				</prevodovka>
+			</klicovevlastnosti>
+		</traktor>
+	</objednavka>
+</zemedelskatechnika>

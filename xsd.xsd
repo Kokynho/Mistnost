@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="zemedelskatechnika">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="objednavka" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="datum" type="xs:date"/>
+              <xs:element name="cas" type="xs:time"/>
+              <xs:element name="objednavatel" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="jmeno">
+					<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="2"/>
+								<xs:maxLength value="15"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="prijmeni">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="2"/>
+								<xs:maxLength value="20"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="vek">
+					  <xs:simpleType>
+					    <xs:restriction base="xs:integer">
+						  <xs:minInclusive value="18"/>
+						  <xs:maxInclusive value="100"/>
+						</xs:restriction>
+					  </xs:simpleType>
+					</xs:element>
+                    <xs:element name="cislouctu">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[A-Z0-9]{24}"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="adresa">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="kontinent">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="Evropa|Asie|Amerika|Austrálie|Afrika"/>
+								</xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                          <xs:element name="stat">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="3"/>
+									<xs:maxLength value="20"/>
+								</xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                          <xs:element name="kraj">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="Hl.m.Praha|Středočeský|Plzeňský|Karlovarský|Ústecký|Liberecký|Králevehradecký|Pardubický|
+									Vysočina|Jihočeský|Jihomoravský|Zlínský|Moravskoslezský|Olomoucký"/>
+								</xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                          <xs:element name="mesto">
+						  <xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="3"/>
+									<xs:maxLength value="20"/>
+								</xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                          <xs:element name="ulice">
+						  <xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="3"/>
+									<xs:maxLength value="20"/>
+								</xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                          <xs:element name="cislo">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:totalDigits value="4"/>
+								</xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                          <xs:element name="psc">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:totalDigits value="5"/>
+								</xs:restriction>
+							</xs:simpleType>
+						  </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="typadresy">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="doručovací"/>
+									<xs:enumeration value="korespondenční"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="datumnarozeni" type="xs:date"/>
+                  <xs:attribute name="titul">
+					<xs:simpleType>
+					  <xs:restriction base="xs:string">
+						<xs:enumeration value="žádný"/>
+						  <xs:enumeration value="Ing."/>
+						  <xs:enumeration value="Bc."/>
+					  </xs:restriction>
+					</xs:simpleType>
+				  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dodavatel" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nazevfirmy">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:whiteSpace value="preserve"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="url">
+						<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="11"/>
+									<xs:maxLength value="100"/>
+								</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="email">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50"/>
+								<xs:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="telefon">
+						<xs:simpleType>
+							<xs:restriction base="xs:integer">
+								<xs:totalDigits value="9"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="fax">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[0-9]*/([0-9])*"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="ico">
+						<xs:simpleType>
+							<xs:restriction base="xs:integer">
+								<xs:totalDigits value="9"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="traktor" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nazev" type="xs:string"/>
+                    <xs:element name="rada" type="xs:string"/>
+                    <xs:element name="vyrobnicislo">
+						<xs:simpleType>
+							<xs:restriction base="xs:integer">
+								<xs:totalDigits value="6"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+                    <xs:element name="pridavnebrzdy">
+					 <xs:simpleType>
+					  <xs:restriction base="xs:string">
+						<xs:enumeration value="ano"/>
+						<xs:enumeration value="ne"/>
+					  </xs:restriction>
+					 </xs:simpleType>
+					</xs:element>
+                    <xs:element name="vykon">
+					  <xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[0-9]*kW"/>
+							</xs:restriction>
+					  </xs:simpleType>
+					</xs:element>
+                    <xs:element name="obsahvalcu">
+					  <xs:simpleType>
+						<xs:restriction base="xs:integer">
+						  <xs:minInclusive value="1"/>
+						  <xs:maxInclusive value="30000"/>
+						</xs:restriction>
+					  </xs:simpleType>
+					</xs:element>
+                    <xs:element name="vaha">
+					  <xs:simpleType>
+						<xs:restriction base="xs:integer">
+						  <xs:minInclusive value="1"/>
+						  <xs:maxInclusive value="10000"/>
+						</xs:restriction>
+					  </xs:simpleType>
+					</xs:element>
+                    <xs:element name="taznasila">
+					  <xs:simpleType>
+						<xs:restriction base="xs:integer">
+						  <xs:minInclusive value="1"/>
+						  <xs:maxInclusive value="5000"/>
+						</xs:restriction>
+					  </xs:simpleType>
+					</xs:element>
+                    <xs:element name="cena">
+					  <xs:simpleType>
+						<xs:restriction base="xs:integer">
+						  <xs:minInclusive value="1"/>
+						  <xs:maxInclusive value="100000000"/>
+						</xs:restriction>
+					  </xs:simpleType>
+					</xs:element>
+                    <xs:element name="klicovevlastnosti">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="kabina">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="vyhled" type="xs:string"/>
+                                <xs:element name="klimatizace">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="ano"/>
+											<xs:enumeration value="ne"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+                                <xs:element name="zvuk" type="xs:string"/>
+                                <xs:element name="ovladače" type="xs:string"/>
+                                <xs:element name="vnejsiosvelteni">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:pattern value="[0-9]*'"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+                                <xs:element name="pocetsvetel" type="xs:integer"/>
+                              </xs:sequence>
+                              <xs:attribute name="typ" type="xs:string"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="rizeni">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="kontrolastability" type="xs:string"/>
+                                <xs:element name="variabilniprevod">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="ano"/>
+											<xs:enumeration value="ne"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="nazevrizeni" type="xs:string"/>
+                              <xs:attribute name="druh" type="xs:string"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="prevodovka">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="prepravnirychlost">
+									<xs:simpleType>
+										<xs:restriction base="xs:integer">
+											<xs:minInclusive value="1"/>
+											<xs:maxInclusive value="150"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+                                <xs:element name="otacky" type="xs:integer"/>
+                                <xs:element name="nastavenirychlosti">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="ano"/>
+											<xs:enumeration value="ne"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+                                <xs:element name="prevody" type="xs:string"/>
+                              </xs:sequence>
+                              <xs:attribute name="nazevprevodovky" type="xs:string"/>
+                              <xs:attribute name="rychlosti" type="xs:string"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="oznaceni">
+					<xs:simpleType>
+					  <xs:restriction base="xs:string">
+						<xs:enumeration value="Velké traktory"/>
+						<xs:enumeration value="Malé traktory"/>
+						<xs:enumeration value="Střední traktory"/>
+						<xs:enumeration value="Speciální"/>
+					  </xs:restriction>
+					</xs:simpleType>
+				  </xs:attribute>
+                  <xs:attribute name="vyrobeno" type="xs:date"/>
+                  <xs:attribute name="stav">
+					<xs:simpleType>
+					  <xs:restriction base="xs:string">
+						<xs:enumeration value="ojetý"/>
+						<xs:enumeration value="nový"/>
+					  </xs:restriction>
+					</xs:simpleType>
+				  </xs:attribute>
+                  <xs:attribute name="mnozstvi">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+						  <xs:minInclusive value="1"/>
+						  <xs:maxInclusive value="100"/>
+						</xs:restriction>
+					</xs:simpleType>
+				  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="objednavkaid">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]*-[0-9]*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
